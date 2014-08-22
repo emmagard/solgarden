@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  location: MyText
+  notes: MyString
+  rain_alert: false
+  frost_alert: false
+
+two:
+  name: MyText
+  location: MyText
+  notes: MyString
+  rain_alert: false
+  frost_alert: false
