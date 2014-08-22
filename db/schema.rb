@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822155530) do
+ActiveRecord::Schema.define(version: 20140822174954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140822155530) do
     t.text     "soil_reqs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "garden_id"
   end
 
   create_table "gardens", force: true do |t|
@@ -41,6 +42,12 @@ ActiveRecord::Schema.define(version: 20140822155530) do
     t.boolean  "frost_alert"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "gardens_plants", id: false, force: true do |t|
+    t.integer "garden_id", null: false
+    t.integer "plant_id",  null: false
   end
 
   create_table "plants", force: true do |t|
