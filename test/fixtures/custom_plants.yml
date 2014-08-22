@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  image: MyString
+  description: MyString
+  sun: MyText
+  water: MyText
+  growing_season: MyText
+  height: 1
+  width: 1
+  spacing: 1
+  seed_depth: 9.99
+  days_to_maturity: 1
+  soil_reqs: MyText
+
+two:
+  name: MyText
+  image: MyString
+  description: MyString
+  sun: MyText
+  water: MyText
+  growing_season: MyText
+  height: 1
+  width: 1
+  spacing: 1
+  seed_depth: 9.99
+  days_to_maturity: 1
+  soil_reqs: MyText
