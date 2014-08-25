@@ -1,2 +1,3 @@
-class CustomPlants < ActiveRecord::Base
+class CustomPlants < Plant
 end
+
