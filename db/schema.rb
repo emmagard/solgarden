@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140825154751) do
+=======
 ActiveRecord::Schema.define(version: 20140822174954) do
+>>>>>>> 864cdbf1b0a4856342a74ed2781fd92d57513fb5
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+  create_table "garden_plants", id: false, force: true do |t|
+    t.integer  "garden_id"
+    t.integer  "plant_id"
+    t.datetime "planted_on"
+    t.text     "notes"
+=======
   create_table "custom_plants", force: true do |t|
     t.text     "name"
     t.string   "image"
@@ -32,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140822174954) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "garden_id"
+>>>>>>> 864cdbf1b0a4856342a74ed2781fd92d57513fb5
   end
 
   create_table "gardens", force: true do |t|
@@ -65,7 +77,11 @@ ActiveRecord::Schema.define(version: 20140822174954) do
     t.text     "soil_reqs"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.integer  "garden_id"
   end
+
+  add_index "plants", ["garden_id"], name: "index_plants_on_garden_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
