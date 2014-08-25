@@ -1,3 +1,3 @@
 class Plant < ActiveRecord::Base
-  belongs_to :gardens_plants
+  has_many :garden_plants
 end
