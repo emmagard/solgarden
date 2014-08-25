@@ -8,7 +8,7 @@
 # Instructions are for adult plants unless otherwise noted
 plant.create(
   name: "Asparagus",
-  image:,
+  image: ,
   description: "This spring stem vegetable is a plant that requires patience, it can take 2-3 years to produce, and should be left to vegetate (not harvested) during the first year or two. But, plants can then produce for up to 25 years!",
   sun: "partial",
   water: "Fairly drought resistant. Best watered thoroughly every 10-14 days in the early morning.",
