@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :gardens
+  resources :gardens do
+    resources :garden_plants
+  end
 
-  resources :plants, only: [:show, :index]
+  resources :plants
 
 
   # The priority is based upon order of creation: first created -> highest priority.
