@@ -1,11 +1,22 @@
-# This file should contain all the record creation needed to seed the database
-# with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside
-# the db with db:setup).
+#TEST GARDENS for user 1 -------------------------------------
+Garden.create(
+  name: "Vegetables Spring 2014",
+  location: "Front-Yard, Cohasset, MA",
+  notes: "This year I mixed Alfalfa pellets into the soil before planting.",
+  user_id: 1
+  )
+Garden.create(
+  name: "Flowers Spring 2014",
+  location: "Back-Yard, Cohasset, MA",
+  notes: "I planted only pink flowers this year!",
+  user_id: 1
+  )
 
+# PLANT REFERENCE --------------------------------------------
 # All integers are in inches.
 # Height, width, spacing and days to maturity are expressed as averages
 # Instructions are for adult plants unless otherwise noted
+
 Plant.create(
   name: "Asparagus",
   description: "This spring stem vegetable is a plant that requires patience, it can take 2-3 years to produce, and should be left to vegetate (not harvested) during the first year or two. But, plants can then produce for up to 25 years!",

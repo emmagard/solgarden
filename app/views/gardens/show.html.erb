@@ -1,1 +1,12 @@
+<h2> <%= @garden.name %> </h2>
+<h4> <%= @garden.notes %> </h4>
 
+<ul>
+  <% @garden.garden_plants.each do |garden_plant| %>
+    <li>
+      <img> </img>
+      <p> <span> <%= garden_plant.plant.name %> </span> <%= garden_plant.planted_on %> </p>
+      <p> <%= garden_plant.notes %> </p>
+    </li>
+  <% end %>
+</ul>
