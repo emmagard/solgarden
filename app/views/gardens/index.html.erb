@@ -1,1 +1,8 @@
-<% binding.pry %>
+<h1>My Gardens</h1>
+<div>
+  <% @gardens.each do |garden| %>
+    <h4> <%= garden.name %> </h4>
+    <p> <%= garden.location %> </p>
+    <small> <%= garden.notes %> </small>
+  <% end %>
+</div>
