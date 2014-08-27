@@ -1,13 +1,19 @@
 <!-- If signed in -->
 <% if user_signed_in?%>
 
-  <h1>My Gardens</h1>
-  <div>
-    <% @gardens.each do |garden| %>
-      <h4> <%= garden.name %> </h4>
-      <p> <%= garden.location %> </p>
-      <small> <%= garden.notes %> </small>
-    <% end %>
+<div class="row">
+  <div class="small-9 small-centered large-centered columns">
+    <div class ="my_gardens">
+      <h1>My Gardens</h1>
+      <div class="button tiny radius round"> <%= link_to "✚", new_garden_path %> </div>
+      <div class="garden-each">
+        <% @gardens.each do |garden| %>
+          <h4> <%= link_to garden.name, garden_path(garden)%>    <small> <%= garden.location %> </small></h4>
+          <p> <%= garden.notes %> </p>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
 <% end %>

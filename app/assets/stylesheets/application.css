@@ -28,3 +28,18 @@
 #bottom-banner{
   height: 20%;
 }
+
+.my_gardens{
+  padding-left: 10px;
+  margin-top: 50px;
+}
+
+.garden_show{
+  padding-left: 10px;
+  margin-top: 50px;
+}
+
+.garden-each h4 a{
+  color: black;
+}
+
