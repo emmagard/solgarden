@@ -1,12 +1,29 @@
-<h2> <%= @garden.name %> </h2>
-<h4> <%= @garden.notes %> </h4>
 
-<ul>
-  <% @garden.garden_plants.each do |garden_plant| %>
-    <li>
-      <img> </img>
-      <p> <span> <%= garden_plant.plant.name %> </span> <%= garden_plant.planted_on %> </p>
-      <p> <%= garden_plant.notes %> </p>
-    </li>
-  <% end %>
-</ul>
+<div class="row">
+  <div class="small-9 small-centered large-centered columns">
+    <div class="garden_show">
+      <h2> <%= @garden.name %> <small> <%= @garden.location %> </small></h2>
+      <p> <%= @garden.notes %> </p>
+      <table>
+        <thead>
+          <tr>
+            <th width="150">Plant Name</th>
+            <th>Planted Date</th>
+            <th width="350">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @garden.garden_plants.each do |garden_plant| %>
+            <tr>
+              <td><%= garden_plant.plant.name %></td>
+              <td><%= garden_plant.planted_on %></td>
+              <td><%= garden_plant.notes %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
