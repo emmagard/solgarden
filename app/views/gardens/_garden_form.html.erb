@@ -1,0 +1,23 @@
+<%= form_for @garden do |f| %>
+  <div class="row">
+    <div class="large-6 columns">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="large-6 columns">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

@@ -9,4 +9,24 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
   end
 
+  def new
+    @garden = Garden.new
+  end
+
+  def create
+    @garden = Garden.new(garden_params)
+    if @garden.save
+      redirect_to garden_path
+    else
+      flash[:notice] = "Your garden did not save :("
+      render :new
+    end
+  end
+
+  private
+
+  def garden_params
+    params.require(:garden).permit([:name, :location, :notes, :rain_alert, :frost_alert])
+  end
+
 end
