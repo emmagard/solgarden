@@ -1,3 +1,6 @@
+Plant.delete_all
+Garden.delete_all
+
 #TEST GARDENS for user 1 -------------------------------------
 Garden.create(
   name: "Vegetables Spring 2014",

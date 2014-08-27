@@ -1,0 +1,30 @@
+<nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="logo">
+          <h1><a href="#"><%= image_tag("https://s3-us-west-2.amazonaws.com/solgardenassets/solgarden_logo.png", alt: "lovely logo") %></a></h1>
+        </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="has-dropdown">
+            <a href="#">Menu</a>
+            <ul class="dropdown">
+              <% if user_signed_in?%>
+                <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
+                <li class="active"><a href="#">Active link in dropdown</a></li>
+              <% else %>
+                <li><%= link_to 'Sign in/Sign up', new_user_session_path %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+    <!-- Left Nav Section -->
+        <ul class="logo-text left">
+          <li><a href="#">Sol Garden</a></li>
+        </ul>
+      </section>
+    </nav>
