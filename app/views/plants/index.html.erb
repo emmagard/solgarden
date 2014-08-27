@@ -1,0 +1,8 @@
+<h1>Edible Plant Reference</h1>
+<div>
+  <% @plants.each do |plant| %>
+    <h4> <%= plant.name %> </h4>
+    <p> <%= plant.image %> </p>
+    <p> <%= plant.description %> </p>
+  <% end %>
+</div>
