@@ -27,8 +27,12 @@
           <li class="has-dropdown">
             <a href="#">Menu</a>
             <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-              <li class="active"><a href="#">Active link in dropdown</a></li>
+              <% if user_signed_in?%>
+                <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
+                <li class="active"><a href="#">Active link in dropdown</a></li>
+              <% else %>
+                <li><%= link_to 'Sign in/Sign up', new_user_session_path %></li>
+              <% end %>
             </ul>
           </li>
         </ul>
