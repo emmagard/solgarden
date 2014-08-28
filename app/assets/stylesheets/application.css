@@ -27,6 +27,7 @@
   height: 60%;
   width: 100%;
 }
+
 #bottom-banner{
   height: 20%;
 }
@@ -51,9 +52,9 @@
 
 #plant-link a{
   color: black;
+}
 
 .plant{
   padding-left: 10px;
   margin-top: 50px;
 }
-
