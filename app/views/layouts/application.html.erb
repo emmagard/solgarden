@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "SolGarden" %></title>
     <link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
@@ -15,9 +15,7 @@
   <body>
 
     <%= render partial: "layouts/navbar" %>
-
-        <div class="body-content row">
-      <div class="small-12 small-centered columns">
+        <%= yield %>
 
         <% if flash[:notice].present? %>
           <p class="notice text-center"><%= flash[:notice] %></p>
@@ -27,10 +25,9 @@
           <p class="alert text-center"><%= flash[:alert] %></p>
         <% end %>
 
-      <%= yield %>
 
-      </div>
-    </div>
+
+
 
     <%= javascript_include_tag "application" %>
 

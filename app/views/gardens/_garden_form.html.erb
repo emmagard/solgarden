@@ -16,10 +16,6 @@
     <%= f.text_area :notes %>
     </div>
   </div>
-  <!-- garden_plant -->
-  <%= f.fields_for :plants do |plant| %>
-    <%= plant.select :name %>
-  <% end %>
   <div class="row">
     <div class="large-12 columns">
       <%= f.submit %>
