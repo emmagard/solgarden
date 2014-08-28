@@ -1,0 +1,14 @@
+<%= form_for :plant do |f| %>
+  Common plant name: <%= f.text_field :name %><br />
+  Description: <%= f.text_area :description %><br />
+  Sunlight Requirements: <%= f.select :sun, options_for_select(["full", "partial", "shady"]), include_blank: "Select One" %><br />
+  Soil requirements: <%= f.text_area :soil_reqs %></br>
+  Watering Schedule/Notes (eg. "1-2 inches/week"): <%= f.text_area :water %><br />
+  Growing Season: <%= f.text_area :growing_season %></br>
+  Dimensions (H x W in inches): <%= f.number_field :height %> x <%= f.number_field :width %></br>
+  Spacing between Plants (in inches): <%= f.number_field :spacing %></br>
+  Seed Depth (in inches): <%= f.number_field :seed_depth %></br>
+  Days to Maturity: <%= f.number_field :days_to_maturity %></br>
+  <%= f.hidden_field :type, value: "CustomPlant" %>
+  <%= f.submit %>
+<% end %>

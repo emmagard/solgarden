@@ -45,6 +45,21 @@
   color: black;
 }
 
+<<<<<<< HEAD
 #devise-links a{
   color: black;
 }
+=======
+.open-modal-link {
+  color: black;
+}
+
+#plant-link a{
+  color: black;
+}
+
+.plant{
+  padding-left: 10px;
+  margin-top: 50px;
+}
+>>>>>>> 9b82b076e5c06430e850f01aff494267f6358071

@@ -1,8 +1,15 @@
-<h1>Edible Plant Reference</h1>
-<div>
-  <% @plants.each do |plant| %>
-    <h4> <%= plant.name %> </h4>
-    <p> <%= plant.image %> </p>
-    <p> <%= plant.description %> </p>
-  <% end %>
+
+<div class="row">
+  <div class="small-11 small-centered large-centered columns">
+    <div class="plants">
+    <h1>Edible Plant Reference</h1>
+      <div>
+        <% @plants.each do |plant| %>
+          <h4> <%= plant.name %> </h4>
+          <p> <%= plant.image %> </p>
+          <p> <%= plant.description %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

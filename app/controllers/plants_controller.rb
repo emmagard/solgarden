@@ -1,8 +1,7 @@
-class PlantsController < ActionController::Base
-
+class PlantsController < ApplicationController
 
   def index
-    @plants = Plant.where(:type != "CustomPlant")
+    @plants = Plant.where(type: 'Plant')
   end
 
   def show
