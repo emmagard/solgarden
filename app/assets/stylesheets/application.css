@@ -20,7 +20,7 @@
   height: 20%%;
 }
 #mid-banner{
-  background-image: image-url(https://s3-us-west-2.amazonaws.com/solgardenassets/IMG_1435.jpg);
+  background-image: image-url("https://s3-us-west-2.amazonaws.com/solgardenassets/IMG_1435.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
