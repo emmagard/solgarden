@@ -19,3 +19,4 @@ end
 
 gem 'devise'
 gem 'foundation-rails'
+
