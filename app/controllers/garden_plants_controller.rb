@@ -1,0 +1,4 @@
+class GardenPlantsController < ApplicationContoller
+
+
+end

@@ -11,6 +11,7 @@ class GardensController < ApplicationController
 
   def new
     @garden = Garden.new
+    @plants = Plant.all
   end
 
   def create
