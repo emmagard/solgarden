@@ -7,6 +7,8 @@ class GardensController < ApplicationController
 
   def show
     @garden = Garden.find(params[:id])
+    @plants = Plant.all
+    @garden_plant = GardenPlant.new
   end
 
   def new
@@ -17,7 +19,7 @@ class GardensController < ApplicationController
   def create
     @garden = Garden.new(garden_params)
     if @garden.save
-      redirect_to garden_path
+      redirect_to @garden
     else
       flash[:notice] = "Your garden did not save :("
       render :new

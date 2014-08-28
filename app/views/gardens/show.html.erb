@@ -4,6 +4,7 @@
     <div class="garden_show">
       <h2> <%= @garden.name %> <small> <%= @garden.location %> </small></h2>
       <p> <%= @garden.notes %> </p>
+      <%= link_to "Add a Plant", "#", :'data-reveal-id' => "gardenPlantModal", :class => "open-modal-link button tiny radius round"%>
       <table>
         <thead>
           <tr>
@@ -15,8 +16,8 @@
         <tbody>
           <% @garden.garden_plants.each do |garden_plant| %>
             <tr>
-              <td><%= garden_plant.plant.name %></td>
-              <td><%= garden_plant.planted_on %></td>
+              <td id="plant-link"><%= link_to garden_plant.plant.name, plant_path(garden_plant.plant) %></td>
+              <td><%= garden_plant.planted_on.strftime("%m/%d/%Y") %></td>
               <td><%= garden_plant.notes %></td>
             </tr>
           <% end %>
@@ -27,3 +28,13 @@
 </div>
 
 
+<div id="gardenPlantModal" class="reveal-modal" data-reveal>
+  <%= form_for [@garden, @garden_plant] do |gp| %>
+    <%= gp.select :plant_id, @plants.collect{ |p| [p.name, p.id] } %>
+    <%= gp.hidden_field :garden_id, :value => @garden.id %>
+    <%= gp.date_field :planted_on %>
+    <%= gp.text_field :notes %>
+    <%= gp.submit %>
+  <% end %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
