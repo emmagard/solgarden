@@ -1,9 +1,8 @@
-class CustomPlantsController < ActionController::Base
-  before_create :set_type
+class CustomPlantsController < ApplicationController
 
   def index
     @custom_plants = CustomPlant.all
-    @custom_plant = Plant.new
+    @custom_plant = CustomPlant.new
   end
 
   def show
@@ -11,11 +10,11 @@ class CustomPlantsController < ActionController::Base
   end
 
   def new
-    @custom_plant = Plant.new
+    @custom_plant = CustomPlant.new
   end
 
   def create
-    @custom_plant = Plant.new(custom_plant_params)
+    @custom_plant = CustomPlant.new(custom_plant_params)
     if @custom_plant.save
       redirect_to @custom_plant
     else
@@ -27,12 +26,6 @@ class CustomPlantsController < ActionController::Base
     @custom_plant = CustomPlant.find(params[:id])
     @custom_plant.destroy
     redirect_to garden_path
-  end
-
-  private
-
-  def set_type
-    self.type = 'CustomPlant'
   end
 
 end
