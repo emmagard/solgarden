@@ -1,10 +1,18 @@
-<h2> <%= @plant.name %> </h2>
-<p> <%= @plant.image %> </p>
-Sunlight requirements: <%= @plant.sun.capitalize %></br>
-Soil requirements: <%= @plant.soil_reqs %></br>
-Watering Recommendations: <%= @plant.water %></br>
-Growing Season: <%= @plant.growing_season %></br>
-Dimensions (H x W in inches): <%= @plant.height %> x <%= @plant.width %></br>
-Spacing (in inches): <%= @plant.spacing %></br>
-Seed Depth (in inches): <%= @plant.seed_depth %></br>
-Days to Maturity: <%= @plant.days_to_maturity %></br>
+
+<div class="row">
+  <div class="small-11 small-centered large-centered columns">
+    <div class="plant">
+      <h2> <%= @plant.name %> </h2>
+      <p> <%= @plant.image %>
+        Sunlight requirements: <%= @plant.sun.capitalize %></br>
+        Soil requirements: <%= @plant.soil_reqs %></br>
+        Watering Recommendations: <%= @plant.water %></br>
+        Growing Season: <%= @plant.growing_season %></br>
+        Dimensions (H x W in inches): <%= @plant.height %> x <%= @plant.width %></br>
+        Spacing (in inches): <%= @plant.spacing %></br>
+        Seed Depth (in inches): <%= @plant.seed_depth %></br>
+        Days to Maturity: <%= @plant.days_to_maturity %></br>
+      </p>
+    </div>
+  </div>
+</div>
