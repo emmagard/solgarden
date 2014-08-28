@@ -20,7 +20,9 @@
   height: 20%%;
 }
 #mid-banner{
-  background: url(https://s3-us-west-2.amazonaws.com/solgardenassets/IMG_1435.jpg) no-repeat center;
+  background-image: image-url(https://s3-us-west-2.amazonaws.com/solgardenassets/IMG_1435.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 60%;
   width: 100%;
@@ -43,7 +45,6 @@
   color: black;
 }
 
-<<<<<<< HEAD
 .open-modal-link {
   color: black;
 }
