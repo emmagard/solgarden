@@ -31,7 +31,8 @@ Plant.create(
   spacing: 8,
   seed_depth: 6,
   days_to_maturity: 730,
-  soil_reqs: "well-drained; raised beds work well."
+  soil_reqs: "well-drained; raised beds work well.",
+  type: 'Plant'
   )
 # Plant.create(
 #   name: "Basil",
@@ -57,7 +58,8 @@ Plant.create(
   spacing: 2,
   seed_depth: 0.5,
   days_to_maturity: 65,
-  soil_reqs: "Highly nutritious, phosphorus-rich soil."
+  soil_reqs: "Highly nutritious, phosphorus-rich soil.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Bell Pepper",
@@ -70,7 +72,8 @@ Plant.create(
   spacing: 21,
   seed_depth: 0.4,
   days_to_maturity: 75,
-  soil_reqs: "evenly-moist but well-drained."
+  soil_reqs: "evenly-moist but well-drained.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Brandywine Tomato",
@@ -83,7 +86,8 @@ Plant.create(
   spacing: 24,
   seed_depth: 0.25,
   days_to_maturity: 90,
-  soil_reqs: "well-drained with lots of organic matter."
+  soil_reqs: "well-drained with lots of organic matter.",
+  type: 'Plant'
     )
 Plant.create(
   name: "Broccoli",
@@ -96,7 +100,8 @@ Plant.create(
   spacing: 18,
   seed_depth: 0.5,
   days_to_maturity: 70,
-  soil_reqs: "Average garden soil, well-drained."
+  soil_reqs: "Average garden soil, well-drained.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Brussels Sprouts",
@@ -109,7 +114,8 @@ Plant.create(
   spacing: 20,
   seed_depth: 0.25,
   days_to_maturity: 85,
-  soil_reqs: "well-drained with lots of organic matter. Raised beds work well for cool-season vegetables."
+  soil_reqs: "well-drained with lots of organic matter. Raised beds work well for cool-season vegetables.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Carrot",
@@ -122,7 +128,8 @@ Plant.create(
   spacing: 4,
   seed_depth: 0.5,
   days_to_maturity: 65,
-  soil_reqs: "Sandy, well-tilled soils with no clay or stone to avoid forked or twisted roots."
+  soil_reqs: "Sandy, well-tilled soils with no clay or stone to avoid forked or twisted roots.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Slicing Cucumber",
@@ -135,7 +142,8 @@ Plant.create(
   spacing: 8,
   seed_depth: 2.0,
   days_to_maturity: 60,
-  soil_reqs: "Light, sandy soils for northern gardeners. Moist and well-drained."
+  soil_reqs: "Light, sandy soils for northern gardeners. Moist and well-drained.",
+  type: 'Plant'
   )
 Plant.create(
   name: "Spinach",
@@ -148,7 +156,22 @@ Plant.create(
   spacing: 8,
   seed_depth: 0.5,
   days_to_maturity: 40,
-  soil_reqs: "Light, sandy soils for northern gardeners. Moist and well-drained."
+  soil_reqs: "Light, sandy soils for northern gardeners. Moist and well-drained.",
+  type: 'Plant'
+  )
+Plant.create(
+  name: "Grandma's Tomatoes",
+  description: "A hearty, juicy tomato passed down as seed from Grandma B",
+  sun: "full",
+  water: "Thoroughly whenever the soil is dry one inch below the surface",
+  growing_season: "Summer, starting a few weeks after the last frost in spring.",
+  height: 55,
+  width: 15,
+  spacing: 12,
+  seed_depth: 2,
+  days_to_maturity: 85,
+  soil_reqs: "As previously stated, must be kept damp but not soggy",
+  type: 'CustomPlant'
   )
 # Plant.create(
 #   name:,
@@ -161,7 +184,8 @@ Plant.create(
 #   spacing:,
 #   seed_depth:,
 #   days_to_maturity:,
-#   soil_reqs:
+#   soil_reqs:,
+#   type:
 #   )
 # Plant.create(
 #   name:,
@@ -174,7 +198,8 @@ Plant.create(
 #   spacing:,
 #   seed_depth:,
 #   days_to_maturity:,
-#   soil_reqs:
+#   soil_reqs:,
+#   type:
 #   )
 # Plant.create(
 #   name:,
@@ -187,7 +212,8 @@ Plant.create(
 #   spacing:,
 #   seed_depth:,
 #   days_to_maturity:,
-#   soil_reqs:
+#   soil_reqs:,
+#   type:
 #   )
 # Plant.create(
 #   name:,
@@ -200,5 +226,20 @@ Plant.create(
 #   spacing:,
 #   seed_depth:,
 #   days_to_maturity:,
-#   soil_reqs:
+#   soil_reqs:,
+#   type:
+#   )
+# Plant.create(
+#   name:,
+#   description:,
+#   sun:,
+#   water:,
+#   growing_season:,
+#   height:,
+#   width:,
+#   spacing:,
+#   seed_depth:,
+#   days_to_maturity:,
+#   soil_reqs:,
+#   type:
 #   )
