@@ -16,6 +16,7 @@
     <%= f.label :notes %>
     <%= f.text_area :notes %>
     </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <div class="row">
     <div class="large-12 columns">

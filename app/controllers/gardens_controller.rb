@@ -9,6 +9,7 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
     @plants = Plant.all
     @garden_plant = GardenPlant.new
+    # @garden_plant = GardenPlant.find(params[:id])
   end
 
   def new
@@ -29,7 +30,7 @@ class GardensController < ApplicationController
   private
 
   def garden_params
-    params.require(:garden).permit([:name, :location, :notes, :rain_alert, :frost_alert])
+    params.require(:garden).permit([:user_id, :name, :location, :notes, :rain_alert, :frost_alert])
   end
 
 end

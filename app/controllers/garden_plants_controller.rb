@@ -9,6 +9,22 @@ class GardenPlantsController < ApplicationController
     end
   end
 
+  def show
+    @garden_plant = GardenPlant.find(params[:id])
+  end
+
+  def update
+    @garden_plant = GardenPlant.find(params[:id])
+    @garden_plant.update(garden_plant_params)
+  end
+
+
+  def destroy
+    @garden_plant = GardenPlant.find(params[:id])
+    @garden_plant.destroy
+    redirect_to garden_path(params[:garden_id]), alert: "You have removed the item."
+  end
+
   private
 
   def garden_plant_params

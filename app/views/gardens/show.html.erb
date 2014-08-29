@@ -11,6 +11,7 @@
             <th width="150">Plant Name</th>
             <th>Planted Date</th>
             <th width="350">Notes</th>
+            <th>Update</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,8 @@
               <td id="plant-link"><%= link_to garden_plant.plant.name, plant_path(garden_plant.plant) %></td>
               <td><%= garden_plant.planted_on.strftime("%m/%d/%Y") %></td>
               <td><%= garden_plant.notes %></td>
+              <td><%= link_to 'Edit', edit_garden_garden_plant_path(@garden, garden_plant) %>
+              <%= link_to 'Delete', garden_garden_plant_path(@garden, garden_plant), method: :delete %></td>
             </tr>
           <% end %>
         </tbody>
