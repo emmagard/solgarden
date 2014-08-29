@@ -1,28 +1,22 @@
-== README
+SolGarden
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A logging tool for gardeners.
 
-Things you may want to cover:
+Features:
 
-* Ruby version
+- Guest users can browse the edible plant library
+- Signed in users can create gardens and add plants to that garden.
 
-* System dependencies
+Future Features:
 
-* Configuration
+- Signed in users can choose to recieve notifications in case of a potential frost or to water their plants.
+- Signed in users can see the weather for their specified region.
+- Signed in users can add custom plants to the library of plants.
 
-* Database creation
+Installation:
 
-* Database initialization
+- Fork and clone
+- Run bundle
+- Run rake db:setup
+- Start you garden!
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
