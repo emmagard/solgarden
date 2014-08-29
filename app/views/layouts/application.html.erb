@@ -15,19 +15,15 @@
   <body>
 
     <%= render partial: "layouts/navbar" %>
-        <%= yield %>
-
-        <% if flash[:notice].present? %>
-          <p class="notice text-center"><%= flash[:notice] %></p>
-        <% end %>
-
-        <% if flash[:alert].present? %>
-          <p class="alert text-center"><%= flash[:alert] %></p>
-        <% end %>
 
 
+    <% flash.each do |name, msg| %>
+      <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg, :class => "flash_#{name}" %>
+      <% end %>
+    <% end %>
 
-
+    <%= yield %>
 
     <%= javascript_include_tag "application" %>
 

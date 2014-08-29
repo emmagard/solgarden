@@ -16,11 +16,31 @@
 
  */
 
+ body, h2, h1{
+  font-family: 'Open Sans', sans-serif;
+ }
+
 #top-banner{
-  height: 20%%;
+  text-align: center;
+  height: 20%;
+  font-family: 'Sacramento', cursive;
+  color: black;
 }
+
+#top-banner h1{
+  margin-top: 45px;
+  margin-bottom: 10px;
+  font-family: 'Sacramento', cursive;
+  font-size: 65px;
+  color: black;
+}
+#top-banner p{
+  font-family:'Open Sans', sans-serif;
+}
+
 #mid-banner{
-  background: image-url(IMG_1435.jpg) no-repeat center;
+  position: relative;
+  background: url(https://s3-us-west-2.amazonaws.com/solgardenassets/IMG_1435.jpg) no-repeat center;
   background-size: cover;
   height: 60%;
   width: 100%;
@@ -35,12 +55,17 @@
   margin-top: 50px;
 }
 
-.garden_show{
+.garden_show h2{
   padding-left: 10px;
   margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .garden-each h4 a{
+  color: black;
+}
+
+#devise-links a{
   color: black;
 }
 
@@ -52,7 +77,9 @@
   color: black;
 }
 
-.plant{
+.plants{
   padding-left: 10px;
   margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
+
