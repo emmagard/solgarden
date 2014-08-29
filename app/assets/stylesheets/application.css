@@ -19,6 +19,9 @@
  body, h2, h1{
   font-family: 'Open Sans', sans-serif;
  }
+a {
+  color: black;
+}
 
 #top-banner{
   text-align: center;
