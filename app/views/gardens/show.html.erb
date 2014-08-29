@@ -2,7 +2,7 @@
 <div class="row">
   <div class="small-9 small-centered large-centered columns">
     <div class="garden_show">
-      <h2> <%= @garden.name %> <small> <%= @garden.location %> </small></h2>
+      <h2><%= @garden.name %> <small> <%= @garden.location %> </small></h2>
       <p> <%= @garden.notes %> </p>
       <%= link_to "Add a Plant", "#", :'data-reveal-id' => "gardenPlantModal", :class => "open-modal-link button tiny radius round"%>
       <table>
@@ -27,14 +27,14 @@
   </div>
 </div>
 
-
+<!-- Modal View -->
 <div id="gardenPlantModal" class="reveal-modal" data-reveal>
   <%= form_for [@garden, @garden_plant] do |gp| %>
     <%= gp.select :plant_id, @plants.collect{ |p| [p.name, p.id] } %>
     <%= gp.hidden_field :garden_id, :value => @garden.id %>
     <%= gp.date_field :planted_on %>
     <%= gp.text_field :notes %>
-    <%= gp.submit %>
+    <%= gp.submit "Add Plant" %>
   <% end %>
   <a class="close-reveal-modal">&#215;</a>
 </div>
