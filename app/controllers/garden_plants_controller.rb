@@ -5,6 +5,7 @@ class GardenPlantsController < ApplicationController
     if @garden_plant.save
       redirect_to :back
     else
+      redirect_to :back
       flash[:notice] = "Your plant did not save."
     end
   end
