@@ -20,3 +20,6 @@ A logging tool for gardeners.
 - Run rake db:setup
 - Start you garden!
 
+##Demo:
+
+http://solgarden.herokuapp.com/
